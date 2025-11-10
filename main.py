@@ -1,5 +1,6 @@
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException
 from uuid import uuid4
+
 from models import MemoryIn, Memory
 import storage
 
