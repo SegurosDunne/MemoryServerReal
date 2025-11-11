@@ -5,6 +5,10 @@ import storage
 
 app = FastAPI(title="Memory Server", version="1.0.0")
 
+@app.on_event("startup")
+def startup():
+    storage.init_db()
+
 @app.get("/health")
 def health():
     return {"ok": True, "docs": "/docs"}
